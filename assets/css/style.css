@@ -467,3 +467,14 @@ footer{
         justify-content:center;
     }
 }
+.related-articles{
+
+    padding:80px 8%;
+}
+
+.related-articles h2{
+
+    margin-bottom:40px;
+
+    text-align:center;
+}
