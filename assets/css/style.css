@@ -478,3 +478,24 @@ footer{
 
     text-align:center;
 }
+/* ==========================
+   READING PROGRESS BAR
+========================== */
+
+.reading-progress{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:0%;
+
+    height:4px;
+
+    background:#D4AF37;
+
+    z-index:9999;
+
+    transition:width .1s linear;
+}
