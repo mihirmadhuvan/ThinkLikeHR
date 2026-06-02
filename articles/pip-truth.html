@@ -1,1 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Truth About PIPs Nobody Explains | Think Like HR</title>
+<meta name="description" content="A Performance Improvement Plan sounds like help. It usually isn't. Here's what HR knows about PIPs that your manager will never tell you.">
+<meta name="author" content="Mihir Madhuvan">
+<meta property="og:title" content="The Truth About PIPs Nobody Explains | Think Like HR">
+<meta property="og:description" content="A Performance Improvement Plan sounds like help. It usually isn't. Here's what HR knows about PIPs that your manager will never tell you.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-light: #444;
+    --ink-muted: #777;
+    --paper: #faf8f5;
+    --paper-warm: #f2ede6;
+    --accent: #c0392b;
+    --accent-dark: #96281b;
+    --accent-pale: #fdf0ee;
+    --border: #e0d9d0;
+    --gold: #b8860b;
+    --progress-h: 3px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.75;
+  }
 
+  /* Reading Progress */
+  .reading-progress {
+    position: fixed;
+    top: 0; left: 0;
+    width: 0%;
+    height: var(--progress-h);
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+    z-index: 1000;
+    transition: width 0.1s linear;
+  }
+
+  /* Navbar */
+  .navbar {
+    position: sticky;
+    top: var(--progress-h);
+    background: var(--paper);
+    border-bottom: 1px solid var(--border);
+    z-index: 900;
+    padding: 0 24px;
+  }
+  .navbar-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 58px;
+  }
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--ink-light);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  @media(max-width:640px){ .nav-links { display:none; } }
+
+  /* Article Hero */
+  .article-hero {
+    background: var(--ink);
+    color: #fff;
+    padding: 80px 24px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .article-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,0.015) 40px,
+      rgba(255,255,255,0.015) 80px
+    );
+  }
+  .hero-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .article-tag {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(192,57,43,0.15);
+    border: 1px solid rgba(192,57,43,0.4);
+    padding: 4px 12px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
+  .article-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 900;
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+  }
+  .article-subtitle {
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.7);
+    font-style: italic;
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+  .article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.04em;
+  }
+  .article-meta span { display: flex; align-items: center; gap: 6px; }
+
+  /* Article Container */
+  .article-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  /* Typography */
+  .article-container p {
+    margin-bottom: 1.4em;
+    color: var(--ink-light);
+    font-weight: 300;
+  }
+  .article-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 2.5em 0 0.7em;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+  .article-container h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 2em 0 0.5em;
+    font-style: italic;
+  }
+  .article-container ul, .article-container ol {
+    padding-left: 1.4em;
+    margin-bottom: 1.4em;
+  }
+  .article-container li {
+    margin-bottom: 0.5em;
+    color: var(--ink-light);
+    font-weight: 300;
+  }
+  .article-container strong { color: var(--ink); font-weight: 600; }
+
+  /* Callout */
+  .callout {
+    background: var(--accent-pale);
+    border-left: 3px solid var(--accent);
+    padding: 20px 24px;
+    margin: 2em 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .callout p { margin: 0; color: var(--ink); font-weight: 400; }
+  .callout-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  /* Key Takeaways Box */
+  .takeaways {
+    background: var(--paper-warm);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--ink);
+    padding: 28px 32px;
+    margin: 2.5em 0;
+    border-radius: 0 0 4px 4px;
+  }
+  .takeaways-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 14px;
+  }
+  .takeaways ul { margin: 0; }
+  .takeaways li { font-weight: 400; color: var(--ink); }
+
+  /* Scenario Box */
+  .scenario {
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 24px 28px;
+    margin: 2em 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+  .scenario-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .scenario p { margin-bottom: 0.7em; }
+  .scenario p:last-child { margin-bottom: 0; }
+
+  /* Divider */
+  .divider {
+    text-align: center;
+    margin: 2.5em 0;
+    color: var(--border);
+    font-size: 1.2rem;
+    letter-spacing: 0.5em;
+  }
+
+  /* FAQ */
+  .faq-section { margin: 3em 0; }
+  .faq-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    margin-bottom: 1.5em;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .faq-item:first-of-type { border-top: 1px solid var(--border); }
+  .faq-q {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--ink);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .faq-q::after {
+    content: '+';
+    font-size: 1.4rem;
+    color: var(--accent);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+  .faq-item.open .faq-q::after { transform: rotate(45deg); }
+  .faq-a {
+    display: none;
+    padding-top: 12px;
+    color: var(--ink-light);
+    font-weight: 300;
+    line-height: 1.7;
+  }
+  .faq-item.open .faq-a { display: block; }
+
+  /* Conclusion */
+  .conclusion {
+    background: var(--ink);
+    color: #fff;
+    padding: 44px 48px;
+    margin: 3em 0;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  .conclusion::before {
+    content: '"';
+    position: absolute;
+    top: -20px; right: 24px;
+    font-family: 'Playfair Display', serif;
+    font-size: 12rem;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+  }
+  .conclusion h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 16px;
+    margin-top: 0;
+  }
+  .conclusion p { color: rgba(255,255,255,0.75); font-weight: 300; margin-bottom: 1em; }
+  .conclusion p:last-child { margin-bottom: 0; }
+
+  /* Footer */
+  footer {
+    background: #111;
+    color: rgba(255,255,255,0.5);
+    padding: 48px 24px;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+  }
+  footer .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  footer .footer-logo span { color: var(--accent); }
+  footer p { margin-bottom: 6px; }
+  footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  footer a:hover { color: #fff; }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin: 16px 0; flex-wrap: wrap; }
+
+  @media(max-width:640px){
+    .article-hero { padding: 56px 20px 48px; }
+    .article-container { padding: 40px 20px 60px; }
+    .conclusion { padding: 32px 24px; }
+    .takeaways { padding: 22px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="reading-progress" id="readingProgress"></div>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="../index.html" class="logo">Think Like <span>HR</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="#">HR Secrets</a></li>
+      <li><a href="#">Salary</a></li>
+      <li><a href="#">Politics</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="article-hero">
+  <div class="hero-inner">
+    <div class="article-tag">HR Secrets</div>
+    <h1>The Truth About PIPs Nobody Explains</h1>
+    <p class="article-subtitle">A Performance Improvement Plan sounds like a second chance. Most of the time, the decision has already been made before you receive it.</p>
+    <div class="article-meta">
+      <span>By Mihir Madhuvan</span>
+      <span>10 min read</span>
+      <span>HR Secrets</span>
+    </div>
+  </div>
+</header>
+
+<main class="article-container">
+
+  <p>You walk into a meeting with your manager and HR. Everyone looks uncomfortable. Then they slide a document across the table — a Performance Improvement Plan.</p>
+
+  <p>Your heart sinks. You're told this is a "structured opportunity to get back on track." You're told the company believes in you. You're told this is not a termination notice.</p>
+
+  <p>What they don't tell you is this: in most Indian companies, a PIP is the last step before an exit. The paperwork has to exist before the company can legally let someone go.</p>
+
+  <p>This article is everything HR knows about PIPs — and everything you deserve to know.</p>
+
+  <div class="takeaways">
+    <div class="takeaways-title">Key Takeaways</div>
+    <ul>
+      <li>A PIP is almost always a documentation process, not a development process</li>
+      <li>HR initiates PIPs to create a legal paper trail before termination</li>
+      <li>Most PIPs are designed to be extremely difficult to pass</li>
+      <li>You have rights during a PIP — most employees don't know them</li>
+      <li>There are smart ways to respond that protect your career</li>
+    </ul>
+  </div>
+
+  <h2>What a PIP Actually Is</h2>
+
+  <p>On paper, a Performance Improvement Plan is a formal document that outlines specific performance issues, measurable targets, and a timeline to meet those targets — usually 30, 60, or 90 days.</p>
+
+  <p>It reads like a support system. Bi-weekly check-ins. Clear objectives. Manager feedback loops.</p>
+
+  <p>In practice, a PIP is created by HR and the manager together — often before you even know there is a performance issue on record.</p>
+
+  <p>The targets inside a PIP are usually set just above what you can realistically achieve in the time given. This isn't an accident.</p>
+
+  <h2>Why Companies Issue PIPs</h2>
+
+  <p>Indian employment law doesn't allow arbitrary termination of permanent employees. If a company wants to let someone go without paying full severance or risking a labour complaint, it needs documented evidence of sustained poor performance.</p>
+
+  <p>The PIP creates that documentation.</p>
+
+  <p>Think of it from HR's perspective:</p>
+  <ul>
+    <li>If the employee fails the PIP — the company has grounds to terminate</li>
+    <li>If the employee resigns during the PIP — the company saves severance costs</li>
+    <li>If somehow the employee passes — they keep a functioning worker</li>
+  </ul>
+
+  <p>All three outcomes work in the company's favour.</p>
+
+  <div class="callout">
+    <div class="callout-title">The Inside View</div>
+    <p>HR professionals often refer to PIPs as "managed exits." The goal isn't improvement — it's documentation that makes a clean exit possible.</p>
+  </div>
+
+  <h2>The Signs a PIP Is Real vs. a Paper Exit</h2>
+
+  <p>Not every PIP is a death sentence. Some managers genuinely want to help an underperforming team member succeed. But the signs of a genuine PIP versus a documentation exercise are usually obvious — once you know what to look for.</p>
+
+  <h3>Signs it might be genuine:</h3>
+  <ul>
+    <li>Your manager seems uncomfortable, not detached</li>
+    <li>The targets are specific, measurable, and achievable within the timeline</li>
+    <li>Training, resources, or mentorship is actually provided</li>
+    <li>Your manager still includes you in team decisions</li>
+    <li>HR follows up but isn't watching your every move</li>
+  </ul>
+
+  <h3>Signs it's a managed exit:</h3>
+  <ul>
+    <li>The targets are vague ("improve client satisfaction") or impossibly high</li>
+    <li>Your access to systems or projects quietly reduces</li>
+    <li>Your manager stops including you in important meetings</li>
+    <li>HR is unusually present in day-to-day matters</li>
+    <li>The document was clearly prepared well in advance</li>
+    <li>You're given 30 days when the goal would normally take 6 months</li>
+  </ul>
+
+  <div class="scenario">
+    <div class="scenario-label">Real Workplace Scenario</div>
+    <p>Priya, a 4-year sales manager at a mid-size Pune firm, received a PIP in October. Her target: increase regional revenue by 25% in 60 days — during the slow Diwali season.</p>
+    <p>She worked 12-hour days. She hit 19%. She was terminated in December.</p>
+    <p>The company had already hired her replacement in November — two weeks into her PIP period.</p>
+  </div>
+
+  <h2>What HR Does Before You Receive the PIP</h2>
+
+  <p>Most employees think the PIP comes as a surprise. It doesn't — not from HR's side.</p>
+
+  <p>Before you receive that document, here is what has already happened:</p>
+
+  <ul>
+    <li>Your manager has had multiple conversations with HR about you</li>
+    <li>HR has reviewed your employment contract and notice period</li>
+    <li>Legal or compliance has reviewed the PIP draft</li>
+    <li>The targets in your PIP have been calculated — sometimes reverse-engineered to be achievable enough to look fair but difficult enough to fail</li>
+    <li>A timeline for your potential exit has been internally discussed</li>
+  </ul>
+
+  <p>You are the last person to know. That asymmetry of information is something you must understand.</p>
+
+  <h2>Your Rights During a PIP</h2>
+
+  <p>Most employees sign the PIP document without reading it carefully. Some are told that signing is mandatory. It isn't — not always.</p>
+
+  <p>Here is what you need to know:</p>
+
+  <ul>
+    <li><strong>You can ask for clarification</strong> on every target before signing</li>
+    <li><strong>You can request resources</strong> — training, tools, managerial support — in writing</li>
+    <li><strong>You do not have to sign immediately</strong> — ask for 24–48 hours to review</li>
+    <li><strong>You can add a note</strong> to the signed document disagreeing with specific points</li>
+    <li><strong>You can document everything</strong> — every check-in, every email, every promised support that doesn't materialise</li>
+  </ul>
+
+  <p>Documentation is your only protection. Use it.</p>
+
+  <h2>Should You Try to Pass It or Plan an Exit?</h2>
+
+  <p>This is the question nobody answers directly. Here is the honest answer: it depends entirely on which type of PIP you're in.</p>
+
+  <p>If the PIP appears genuine — targets are fair, manager is supportive — give it everything you have. Some people do survive PIPs and rebuild strong careers in the same company.</p>
+
+  <p>If the PIP is clearly designed to fail — start your job search immediately. Use the PIP period to interview quietly, negotiate a better exit, and protect your next opportunity.</p>
+
+  <p>Never resign impulsively during a PIP. That is exactly what the company wants. If you resign, you lose all entitlement to severance and may lose some benefits. If they terminate you, you have stronger legal standing.</p>
+
+  <div class="callout">
+    <div class="callout-title">The Smart Move</div>
+    <p>Update your LinkedIn privately. Contact your recruiter network quietly. Give your best effort on paper — while planning your next chapter in parallel. You owe it to yourself.</p>
+  </div>
+
+  <h2>How a PIP Affects Your Full and Final Settlement</h2>
+
+  <p>If you are terminated after failing a PIP, your Full and Final (FnF) settlement usually includes:</p>
+  <ul>
+    <li>Salary for days worked in the last month</li>
+    <li>Pending leave encashment</li>
+    <li>Gratuity (if applicable — 5 years of service)</li>
+    <li>PF settlement</li>
+    <li>Notice pay (or waiver of notice, depending on your contract)</li>
+  </ul>
+
+  <p>Make sure you receive the FnF amount before signing any separation agreement or releasing the company from future claims.</p>
+
+  <h2>The Emotional Cost Nobody Talks About</h2>
+
+  <p>A PIP doesn't just affect your job. It affects how you see yourself at work.</p>
+
+  <p>You start second-guessing decisions. You over-explain every email. You feel watched. You feel like a liability instead of a contributor.</p>
+
+  <p>That psychological pressure is partly by design. When people are under stress, they make mistakes — and those mistakes feed back into the performance documentation.</p>
+
+  <p>The most important thing you can do during a PIP is maintain perspective. One company's opinion of your performance is not the truth about your worth or your future.</p>
+
+  <div class="divider">· · ·</div>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Can I refuse to sign a PIP?</div>
+      <div class="faq-a">You can refuse, but it can be used against you. A smarter approach: sign with a written note stating you "acknowledge receipt but dispute specific targets" — this protects you legally while avoiding an outright refusal.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Does a PIP show up on background checks?</div>
+      <div class="faq-a">No. PIPs are internal documents and do not appear on background verification checks. However, employment termination for performance reasons may be disclosed by a previous employer if contacted directly — which is why managing your references matters.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What's the difference between a warning letter and a PIP?</div>
+      <div class="faq-a">A warning letter is a one-time formal notice. A PIP is a structured process over weeks with targets and check-ins. A PIP carries significantly more legal weight as documentation for potential termination.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Can I negotiate during a PIP?</div>
+      <div class="faq-a">Yes — and many employees don't realise this. You can negotiate the targets, the timeline, and even negotiate a mutual separation with agreed severance instead of going through the PIP process. HR often prefers clean exits over prolonged performance battles.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">If I pass the PIP, am I safe?</div>
+      <div class="faq-a">Not necessarily. Some employees who pass a PIP find they're put on another one within 6 months, or quietly managed out through other means. Passing a PIP when the company wanted an exit can extend the timeline but rarely changes the underlying decision.</div>
+    </div>
+  </section>
+
+  <section class="conclusion">
+    <h2>Final Word</h2>
+    <p>A PIP is not a performance tool. In most cases, it's an exit tool with a performance costume on.</p>
+    <p>That doesn't mean you should panic. It means you should be clear-eyed. Understand what you're in. Know your rights. Document everything. And move with intention — not reaction.</p>
+    <p>The company has been planning this conversation for weeks. You deserve to be just as prepared.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-logo">Think Like <span>HR</span></div>
+  <p>What HR Knows. What Employees Should Know.</p>
+  <div class="footer-links">
+    <a href="../index.html">Home</a>
+    <a href="#">HR Secrets</a>
+    <a href="#">Salary & Benefits</a>
+    <a href="#">Corporate Politics</a>
+  </div>
+  <p style="margin-top:16px;">© 2025 Think Like HR · Founded by Mihir Madhuvan</p>
+</footer>
+
+<script>
+  // Reading progress
+  const bar = document.getElementById('readingProgress');
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (scrollTop / docHeight * 100) + '%';
+  });
+  // FAQ toggle
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      item.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>
