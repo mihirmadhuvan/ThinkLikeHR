@@ -260,3 +260,40 @@ footer{
 .article-container ul{
     margin-left:20px;
 }
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:rgba(7,17,31,.95);
+
+    backdrop-filter:blur(10px);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+}
+
+.logo{
+    color:#d4af37;
+    font-size:1.4rem;
+    font-weight:700;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#d4af37;
+}
