@@ -1,80 +1,449 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Labour Laws | Think Like HR</title>
-
-<link rel="stylesheet" href="../assets/css/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labour Laws in India | Know Your Rights | Think Like HR</title>
+    <meta name="description" content="A complete guide to Labour Laws in India for employees. Understand your rights on salary, PF, gratuity, notice period, leaves, POSH and workplace safety.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .category-hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
+        .category-hero .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .category-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .category-hero p {
+            font-size: 1.1rem;
+            opacity: 0.85;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .pillar-content {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        .pillar-intro {
+            background: #f8f9ff;
+            border-left: 5px solid #0f3460;
+            padding: 28px 32px;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 48px;
+        }
+        .pillar-intro p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+        }
+        .pillar-section {
+            margin-bottom: 48px;
+        }
+        .pillar-section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .pillar-section h2 .icon {
+            font-size: 1.4rem;
+        }
+        .pillar-section p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 0.97rem;
+            margin-bottom: 12px;
+        }
+        .info-box {
+            background: #fff;
+            border: 1px solid #e0e7ff;
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-top: 16px;
+        }
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .info-box ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: #444;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .info-box ul li:last-child {
+            border-bottom: none;
+        }
+        .info-box ul li::before {
+            content: "✓";
+            color: #0f3460;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .highlight-card {
+            background: linear-gradient(135deg, #0f3460, #1a1a2e);
+            color: white;
+            border-radius: 16px;
+            padding: 28px 32px;
+            margin: 24px 0;
+        }
+        .highlight-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .highlight-card p {
+            color: rgba(255,255,255,0.85);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 16px;
+        }
+        .mini-card {
+            background: #fff;
+            border: 1px solid #e0e7ff;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .mini-card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+        .mini-card p {
+            font-size: 0.88rem;
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .divider {
+            border: none;
+            border-top: 2px solid #f0f0f0;
+            margin: 48px 0;
+        }
+        .related-section {
+            background: #f8f9ff;
+            padding: 60px 24px;
+        }
+        .related-section .section-title {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 32px;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        .related-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid #e0e7ff;
+            text-decoration: none;
+            display: block;
+            transition: box-shadow 0.2s;
+        }
+        .related-card:hover {
+            box-shadow: 0 4px 20px rgba(15,52,96,0.12);
+        }
+        .related-card .cat-tag {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #0f3460;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .related-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            line-height: 1.5;
+            margin: 0;
+        }
+        .breadcrumb {
+            background: #fff;
+            padding: 14px 40px;
+            border-bottom: 1px solid #eee;
+            font-size: 0.85rem;
+            color: #888;
+        }
+        .breadcrumb a {
+            color: #0f3460;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover { text-decoration: underline; }
+        @media (max-width: 640px) {
+            .category-hero h1 { font-size: 1.9rem; }
+            .two-col { grid-template-columns: 1fr; }
+            .pillar-content { padding: 40px 16px; }
+        }
+    </style>
 </head>
-
 <body>
 
-<nav class="navbar">
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Think Like HR</div>
+        <ul class="nav-links">
+            <li><a href="../categories/labour-laws.html">Labour Laws</a></li>
+            <li><a href="../categories/hr-secrets.html">HR Secrets</a></li>
+            <li><a href="../categories/appraisals-promotions.html">Appraisals</a></li>
+            <li><a href="../categories/corporate-politics.html">Corporate Politics</a></li>
+        </ul>
+    </nav>
 
-```
-<div class="logo">
-    Think Like HR
-</div>
-
-<a href="../index.html">← Back to Home</a>
-```
-
-</nav>
-
-<header class="article-hero">
-
-```
-<div class="article-tag">
-    Category
-</div>
-
-<h1>Labour Laws</h1>
-
-<p class="article-subtitle">
-    Understand your workplace rights, salary rules, gratuity, PF and labour law protections in India.
-</p>
-```
-
-</header>
-
-<main class="article-container">
-
-```
-<div class="article-grid">
-
-    <div class="article-card">
-
-        <span class="category">Labour Laws</span>
-
-        <h3>
-            <a href="../articles/labour-laws-2026.html">
-                7 Labour Laws Every Employee Must Know in 2026
-            </a>
-        </h3>
-
-        <p>
-            The laws that can protect your salary, gratuity, PF and job security.
-        </p>
-
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a> › Labour Laws
     </div>
 
-</div>
-```
+    <!-- HERO -->
+    <section class="category-hero">
+        <span class="badge">⚖ Category Guide</span>
+        <h1>Labour Laws in India</h1>
+        <p>Everything employees must know about their legal rights at work — explained in plain language.</p>
+    </section>
 
-</main>
+    <!-- MAIN CONTENT -->
+    <div class="pillar-content">
 
-<footer>
+        <!-- INTRO -->
+        <div class="pillar-intro">
+            <p>Most employees in India sign their offer letters, join their companies and never once read the laws that protect them. HR knows these laws. Your employer's legal team knows these laws. It's time you did too. This guide breaks down India's key labour laws in simple language — no legal jargon, just what you need to know.</p>
+        </div>
 
-<h3>Think Like HR</h3>
+        <!-- SECTION 1 -->
+        <div class="pillar-section">
+            <h2><span class="icon">📖</span> What Are Labour Laws?</h2>
+            <p>Labour laws are legal rules set by the Government of India that govern the relationship between employers and employees. They cover everything from how much you should be paid to how many hours you can be made to work, what happens when you resign, and what rights you have if you're fired.</p>
+            <p>India had over 44 central labour laws. The government has been consolidating these into 4 Labour Codes — covering Wages, Industrial Relations, Social Security, and Occupational Safety — though implementation has been phased and varies by state.</p>
+            <div class="highlight-card">
+                <h3>The 4 Labour Codes You Must Know</h3>
+                <p>1. <strong>Code on Wages</strong> — Minimum wage, equal pay, timely payment<br>
+                2. <strong>Code on Industrial Relations</strong> — Hiring, firing, strikes, retrenchment<br>
+                3. <strong>Code on Social Security</strong> — PF, ESI, gratuity, maternity benefit<br>
+                4. <strong>Code on Occupational Safety</strong> — Working hours, safety, POSH</p>
+            </div>
+        </div>
 
-<p>What HR Knows. What Employees Should Know.</p>
+        <hr class="divider">
 
-</footer>
+        <!-- SECTION 2 -->
+        <div class="pillar-section">
+            <h2><span class="icon">💡</span> Why Every Employee Should Care</h2>
+            <p>Ignorance of labour laws doesn't just leave you powerless — it costs you money. Employees who don't know their rights often:</p>
+            <div class="info-box">
+                <ul>
+                    <li>Accept illegal salary deductions without questioning them</li>
+                    <li>Lose gratuity they were fully entitled to</li>
+                    <li>Serve notice periods longer than what's legally required</li>
+                    <li>Get pressured into resigning instead of being terminated (denying them benefits)</li>
+                    <li>Work overtime without any legal compensation</li>
+                    <li>Miss out on maternity or paternity benefits they qualify for</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- SECTION 3 -->
+        <div class="pillar-section">
+            <h2><span class="icon">💰</span> Salary & Wage Rights</h2>
+            <p>Under the <strong>Code on Wages, 2019</strong>, every employee is entitled to timely payment of wages. Here's what that means practically:</p>
+            <div class="two-col">
+                <div class="mini-card">
+                    <h4>When Must Salary Be Paid?</h4>
+                    <p>Wages must be paid before the 7th of the following month for establishments with fewer than 1,000 employees, and before the 10th for larger ones.</p>
+                </div>
+                <div class="mini-card">
+                    <h4>What Deductions Are Illegal?</h4>
+                    <p>No employer can deduct wages without a valid reason. Deductions are only permitted for PF, ESI, income tax, fines approved by law, or absence from duty.</p>
+                </div>
+                <div class="mini-card">
+                    <h4>Minimum Wage</h4>
+                    <p>Every state has its own minimum wage. The national floor minimum wage is currently ₹178/day. If you're paid below this, it's a violation.</p>
+                </div>
+                <div class="mini-card">
+                    <h4>Equal Pay</h4>
+                    <p>The Code on Wages mandates equal remuneration for men and women doing the same or similar work. Gender-based pay gaps are illegal.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- SECTION 4 -->
+        <div class="pillar-section">
+            <h2><span class="icon">🏦</span> Provident Fund (PF) Explained</h2>
+            <p>The <strong>Employees' Provident Fund (EPF)</strong> is a retirement savings scheme mandatory for all employees earning up to ₹15,000/month in basic pay (though many employers extend it to all employees).</p>
+            <div class="info-box">
+                <ul>
+                    <li>You contribute 12% of your basic salary to your PF account every month</li>
+                    <li>Your employer matches your 12% contribution</li>
+                    <li>Of the employer's 12%, 8.33% goes to your Pension (EPS) and 3.67% to your PF</li>
+                    <li>PF earns a fixed interest rate declared annually by the government</li>
+                    <li>You can check your balance anytime via the EPFO portal or Umang app</li>
+                    <li>PF withdrawal before 5 years of service attracts income tax</li>
+                </ul>
+            </div>
+            <p style="margin-top:16px;"><strong>Key alert:</strong> If your employer deducts PF from your salary but doesn't deposit it with EPFO — that is a criminal offence. Check your passbook regularly.</p>
+        </div>
+
+        <hr class="divider">
+
+        <!-- SECTION 5 -->
+        <div class="pillar-section">
+            <h2><span class="icon">🎁</span> Gratuity: Your Long-Term Right</h2>
+            <p>Gratuity is a lump sum payment made by an employer as a token of appreciation for continuous service. It is governed by the <strong>Payment of Gratuity Act, 1972</strong>.</p>
+            <div class="two-col">
+                <div class="mini-card">
+                    <h4>Who Is Eligible?</h4>
+                    <p>Any employee who has completed 5 years of continuous service with the same employer qualifies for gratuity upon resignation, retirement, or termination.</p>
+                </div>
+                <div class="mini-card">
+                    <h4>How Is It Calculated?</h4>
+                    <p>Gratuity = (Last drawn basic + DA × 15 × years of service) ÷ 26. The 26 accounts for working days per month.</p>
+                </div>
+            </div>
+            <div class="highlight-card" style="margin-top:20px;">
+                <h3>⚠ Common HR Trick to Watch Out For</h3>
+                <p>Some employers keep Basic Pay artificially low (e.g. ₹8,000 in a ₹50,000 CTC) to minimise their gratuity payout. Under the new Labour Code, Basic Pay must be at least 50% of CTC — which would significantly increase your gratuity.</p>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- SECTION 6 -->
+        <div class="pillar-section">
+            <h2><span class="icon">📋</span> Notice Period Rights</h2>
+            <p>Your notice period terms must be clearly stated in your employment contract. However, labour law provides a floor:</p>
+            <div class="info-box">
+                <ul>
+                    <li>Under the Industrial Employment (Standing Orders) Act, notice periods cannot exceed 30 days for most workers</li>
+                    <li>If your employer terminates you without notice, they must pay wages for the notice period</li>
+                    <li>If you resign and serve notice, the employer cannot forcibly extend it beyond what is contractually agreed</li>
+                    <li>Garden leave (asking you to not come to work but still pay you) is valid and still counts as notice served</li>
+                    <li>Notice period buyout is a mutual agreement — your employer cannot force you to buy out if not mentioned in the contract</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- SECTION 7 -->
+        <div class="pillar-section">
+            <h2><span class="icon">🕐</span> Leave & Working Hours</h2>
+            <p>Under the <strong>Factories Act</strong> and various Shops & Establishments Acts (state-specific), employees have clear rights around working hours and leave.</p>
+            <div class="two-col">
+                <div class="mini-card">
+                    <h4>Maximum Working Hours</h4>
+                    <p>9 hours a day and 48 hours a week. Work beyond this qualifies as overtime and must be compensated at double the regular rate.</p>
+                </div>
+                <div class="mini-card">
+                    <h4>Earned Leave (EL)</h4>
+                    <p>After 240 days of work in a year, employees are entitled to 1 day of earned leave per 20 days worked. Unused EL can be encashed.</p>
+                </div>
+                <div class="mini-card">
+                    <h4>Sick Leave & Casual Leave</h4>
+                    <p>Entitlement varies by state law and company policy. Most Shops & Establishments Acts mandate a minimum of 12 days of combined leave per year.</p>
+                </div>
+                <div class="mini-card">
+                    <h4>Maternity Leave</h4>
+                    <p>Under the Maternity Benefit Act, women employees are entitled to 26 weeks of paid maternity leave (for first two children) in establishments with 10+ employees.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- SECTION 8 -->
+        <div class="pillar-section">
+            <h2><span class="icon">🛡</span> POSH & Workplace Safety</h2>
+            <p>The <strong>Prevention of Sexual Harassment (POSH) Act, 2013</strong> is one of the most important laws protecting employees — especially women — in Indian workplaces.</p>
+            <div class="info-box">
+                <ul>
+                    <li>Every company with 10 or more employees must have an Internal Complaints Committee (ICC)</li>
+                    <li>All employees — permanent, contractual, temporary, interns — are covered under POSH</li>
+                    <li>Sexual harassment includes verbal, non-verbal, physical and digital forms of misconduct</li>
+                    <li>Complaints must be resolved within 90 days; the ICC must submit an annual report</li>
+                    <li>Retaliation against a complainant is illegal and actionable</li>
+                    <li>Employers who fail to constitute an ICC can face fines up to ₹50,000</li>
+                </ul>
+            </div>
+        </div>
+
+    </div><!-- end pillar-content -->
+
+    <!-- RELATED ARTICLES -->
+    <section class="related-section">
+        <div class="section-title">📚 Related Articles</div>
+        <div class="related-grid">
+            <a class="related-card" href="../articles/labour-laws-2026.html">
+                <span class="cat-tag">Labour Laws</span>
+                <h3>7 Labour Laws Every Employee Must Know in 2026</h3>
+            </a>
+            <a class="related-card" href="../articles/pf-mistakes.html">
+                <span class="cat-tag">Salary & Benefits</span>
+                <h3>PF Mistakes That Cost Employees Lakhs</h3>
+            </a>
+            <a class="related-card" href="../articles/gratuity-explained.html">
+                <span class="cat-tag">Salary & Benefits</span>
+                <h3>Gratuity Explained: What HR Doesn't Tell You</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h3>Think Like HR</h3>
+        <p>What HR Knows. What Employees Should Know.</p>
+        <p>© 2026 Think Like HR</p>
+    </footer>
 
 </body>
 </html>
