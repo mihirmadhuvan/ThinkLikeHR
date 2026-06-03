@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary & Benefits in India | CTC, PF, Gratuity Explained | Think Like HR</title>
+    <meta name="description" content="Understand your CTC, salary structure, PF, gratuity, HRA, LTA and other benefits. Stop losing money without knowing it.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .category-hero { background: linear-gradient(135deg, #134e00 0%, #1a6b00 50%, #2d9200 100%); color: white; padding: 80px 40px; text-align: center; }
+        .category-hero .badge { display: inline-block; background: rgba(255,255,255,0.15); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; }
+        .category-hero h1 { font-family: 'Poppins', sans-serif; font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; }
+        .category-hero p { font-size: 1.1rem; opacity: 0.85; max-width: 600px; margin: 0 auto; }
+        .pillar-content { max-width: 860px; margin: 0 auto; padding: 60px 24px; }
+        .pillar-intro { background: #f0fff4; border-left: 5px solid #2d9200; padding: 28px 32px; border-radius: 0 12px 12px 0; margin-bottom: 48px; }
+        .pillar-intro p { font-size: 1.05rem; line-height: 1.8; color: #333; margin: 0; }
+        .pillar-section { margin-bottom: 48px; }
+        .pillar-section h2 { font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 700; color: #134e00; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+        .pillar-section p { color: #555; line-height: 1.8; font-size: 0.97rem; margin-bottom: 12px; }
+        .info-box { background: #fff; border: 1px solid #c8f0c0; border-radius: 12px; padding: 24px 28px; margin-top: 16px; }
+        .info-box ul { list-style: none; padding: 0; margin: 0; }
+        .info-box ul li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; color: #444; font-size: 0.95rem; display: flex; align-items: flex-start; gap: 10px; }
+        .info-box ul li:last-child { border-bottom: none; }
+        .info-box ul li::before { content: "₹"; color: #2d9200; font-weight: 700; flex-shrink: 0; }
+        .highlight-card { background: linear-gradient(135deg, #134e00, #1a6b00); color: white; border-radius: 16px; padding: 28px 32px; margin: 24px 0; }
+        .highlight-card h3 { font-family: 'Poppins', sans-serif; font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; }
+        .highlight-card p { color: rgba(255,255,255,0.85); line-height: 1.7; font-size: 0.95rem; margin: 0; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 16px; }
+        .mini-card { background: #fff; border: 1px solid #c8f0c0; border-radius: 12px; padding: 20px; }
+        .mini-card h4 { font-family: 'Poppins', sans-serif; font-size: 0.95rem; font-weight: 700; color: #134e00; margin-bottom: 8px; }
+        .mini-card p { font-size: 0.88rem; color: #666; line-height: 1.6; margin: 0; }
+        .ctc-table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 0.92rem; }
+        .ctc-table th { background: #134e00; color: white; padding: 12px 16px; text-align: left; font-family: 'Poppins', sans-serif; font-weight: 600; }
+        .ctc-table td { padding: 11px 16px; border-bottom: 1px solid #e8f5e2; color: #444; }
+        .ctc-table tr:last-child td { border-bottom: none; }
+        .ctc-table tr:nth-child(even) td { background: #f5fff0; }
+        .divider { border: none; border-top: 2px solid #f0f0f0; margin: 48px 0; }
+        .related-section { background: #f0fff4; padding: 60px 24px; }
+        .related-section .section-title { text-align: center; font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 700; color: #134e00; margin-bottom: 32px; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; max-width: 860px; margin: 0 auto; }
+        .related-card { background: white; border-radius: 12px; padding: 24px; border: 1px solid #c8f0c0; text-decoration: none; display: block; transition: box-shadow 0.2s; }
+        .related-card:hover { box-shadow: 0 4px 20px rgba(45,146,0,0.12); }
+        .related-card .cat-tag { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #2d9200; margin-bottom: 10px; display: block; }
+        .related-card h3 { font-family: 'Poppins', sans-serif; font-size: 0.95rem; font-weight: 600; color: #134e00; line-height: 1.5; margin: 0; }
+        .breadcrumb { background: #fff; padding: 14px 40px; border-bottom: 1px solid #eee; font-size: 0.85rem; color: #888; }
+        .breadcrumb a { color: #2d9200; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        @media (max-width: 640px) { .category-hero h1 { font-size: 1.9rem; } .two-col { grid-template-columns: 1fr; } .pillar-content { padding: 40px 16px; } }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Think Like HR</div>
+        <ul class="nav-links">
+            <li><a href="../categories/labour-laws.html">Labour Laws</a></li>
+            <li><a href="../categories/hr-secrets.html">HR Secrets</a></li>
+            <li><a href="../categories/appraisals-promotions.html">Appraisals</a></li>
+            <li><a href="../categories/corporate-politics.html">Corporate Politics</a></li>
+        </ul>
+    </nav>
+
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a> › Salary & Benefits
+    </div>
+
+    <section class="category-hero">
+        <span class="badge">💰 Category Guide</span>
+        <h1>Salary & Benefits</h1>
+        <p>Decode your CTC, understand your deductions and make sure you're not losing money you're entitled to.</p>
+    </section>
+
+    <div class="pillar-content">
+
+        <div class="pillar-intro">
+            <p>Most employees in India negotiate their CTC without fully understanding what it means. They accept offers, sign letters and spend years not knowing they are losing PF contributions, gratuity and tax benefits they're fully entitled to. This guide changes that.</p>
+        </div>
+
+        <div class="pillar-section">
+            <h2><span class="icon">📊</span> CTC vs In-Hand Salary: The Difference Nobody Explains</h2>
+            <p>CTC — Cost to Company — is the total amount your employer spends on you annually. Your in-hand salary is what actually hits your bank account. The gap between the two can be 20–40% and it's important to understand where that money goes.</p>
+            <table class="ctc-table">
+                <thead>
+                    <tr><th>Component</th><th>What It Is</th><th>Taxable?</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Basic Salary</td><td>Core salary; base for PF and gratuity calculation</td><td>Yes</td></tr>
+                    <tr><td>HRA</td><td>House Rent Allowance; partially exempt if you pay rent</td><td>Partially</td></tr>
+                    <tr><td>Special Allowance</td><td>Flexible component; fully taxable</td><td>Yes</td></tr>
+                    <tr><td>LTA</td><td>Leave Travel Allowance; exempt for actual travel costs</td><td>Conditionally</td></tr>
+                    <tr><td>PF (Employee)</td><td>12% of basic; deducted from your salary</td><td>Exempt</td></tr>
+                    <tr><td>PF (Employer)</td><td>12% of basic; paid by employer, counted in CTC</td><td>Exempt</td></tr>
+                    <tr><td>Gratuity (Provision)</td><td>Employer's future liability, included in CTC</td><td>Exempt on receipt</td></tr>
+                    <tr><td>Medical / Food / Internet</td><td>Perks and reimbursements</td><td>Varies</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr class="divider">
+
+        <div class="pillar-section">
+            <h2><span class="icon">⚠</span> The Basic Pay Trap</h2>
+            <p>The most expensive salary mistake employees make is accepting a low Basic Pay. Basic Pay is the foundation of your PF contribution and your gratuity. Companies sometimes inflate allowances and keep Basic Pay low — which looks good on paper but quietly costs you lakhs over your career.</p>
+            <div class="highlight-card">
+                <h3>The New 50% Rule Under Labour Codes</h3>
+                <p>Under India's new Labour Codes (once fully implemented), Basic Pay must be at least 50% of your CTC. This is a major shift. If your current Basic is only 20–30% of CTC, your PF contribution and future gratuity are significantly lower than they should be. Always negotiate Basic Pay, not just total CTC.</p>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="pillar-section">
+            <h2><span class="icon">🏦</span> PF: How It Works & Common Mistakes</h2>
+            <p>Your PF (Provident Fund) is a long-term retirement corpus that grows tax-free. But most employees have never checked their PF balance or verified whether their employer is depositing correctly.</p>
+            <div class="info-box">
+                <ul>
+                    <li>You contribute 12% of Basic Pay; employer contributes another 12%</li>
+                    <li>The employer's 12% is split: 8.33% to Pension (EPS) and 3.67% to PF</li>
+                    <li>Check your balance via EPFO portal (epfindia.gov.in) or the Umang app</li>
+                    <li>If your employer deducts PF but doesn't deposit it — that is a punishable offence</li>
+                    <li>Withdrawing PF before 5 years of continuous service makes it taxable</li>
+                    <li>You can transfer PF when switching jobs using your UAN number</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="pillar-section">
+            <h2><span class="icon">🎁</span> Gratuity: Your Silent Wealth Builder</h2>
+            <p>Gratuity is a lump-sum benefit paid by employers when you complete 5 or more years of service. It is your right under the Payment of Gratuity Act — not a bonus or gift.</p>
+            <div class="two-col">
+                <div class="mini-card">
+                    <h4>Formula</h4>
+                    <p>(Last Basic + DA) × 15 × Years of Service ÷ 26<br><br>Example: ₹30,000 basic, 6 years = ₹30,000 × 15 × 6 ÷ 26 = ₹1,03,846</p>
+                </div>
+                <div class="mini-card">
+                    <h4>Eligibility</h4>
+                    <p>Minimum 5 years of continuous service with the same employer. Even 4 years and 240 working days in the 5th year may qualify in some interpretations.</p>
+                </div>
+                <div class="mini-card">
+                    <h4>Tax Treatment</h4>
+                    <p>Gratuity up to ₹20 lakhs is fully tax-exempt for private sector employees. Beyond that, it is taxable as per your income slab.</p>
+                </div>
+                <div class="mini-card">
+                    <h4>If Employer Refuses</h4>
+                    <p>File a complaint with the Controlling Authority (Labour Commissioner) in your area. Withholding gratuity is a legal violation.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="pillar-section">
+            <h2><span class="icon">🏠</span> HRA: Are You Claiming It Correctly?</h2>
+            <p>House Rent Allowance (HRA) is one of the biggest legal tax-saving opportunities for salaried employees. Yet many employees either don't claim it or claim less than they're entitled to.</p>
+            <div class="info-box">
+                <ul>
+                    <li>HRA exemption is the lowest of: actual HRA received, 50% of basic (metro) or 40% (non-metro), or actual rent paid minus 10% of basic</li>
+                    <li>You must submit rent receipts (and landlord PAN if annual rent exceeds ₹1 lakh) to your employer</li>
+                    <li>You can claim HRA even if you pay rent to a parent — but keep documentation proper</li>
+                    <li>If your employer doesn't offer HRA, you can still claim under Section 80GG while filing ITR</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="pillar-section">
+            <h2><span class="icon">📋</span> Benefits Most Employees Never Use</h2>
+            <div class="two-col">
+                <div class="mini-card">
+                    <h4>LTA (Leave Travel Allowance)</h4>
+                    <p>Tax-exempt for travel within India. Can be claimed twice in a block of 4 years. Requires actual travel and tickets as proof.</p>
+                </div>
+                <div class="mini-card">
+                    <h4>Food Coupons / Meal Card</h4>
+                    <p>Up to ₹50 per meal (approx ₹26,400/year) is tax-exempt. If your employer offers this, opt in — it's essentially tax-free cash.</p>
+                </div>
+                <div class="mini-card">
+                    <h4>NPS (National Pension Scheme)</h4>
+                    <p>Employer's contribution to NPS (up to 10% of salary) is exempt from tax under Section 80CCD(2) — over and above the ₹1.5L 80C limit.</p>
+                </div>
+                <div class="mini-card">
+                    <h4>Medical Reimbursement</h4>
+                    <p>If your company has a medical reimbursement policy, submit bills and claim them. Unclaimed medical benefits are a common silent loss.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="related-section">
+        <div class="section-title">📚 Related Articles</div>
+        <div class="related-grid">
+            <a class="related-card" href="../articles/pf-mistakes.html">
+                <span class="cat-tag">Salary & Benefits</span>
+                <h3>PF Mistakes That Cost Employees Lakhs</h3>
+            </a>
+            <a class="related-card" href="../articles/gratuity-explained.html">
+                <span class="cat-tag">Salary & Benefits</span>
+                <h3>Gratuity Explained: What HR Doesn't Tell You</h3>
+            </a>
+            <a class="related-card" href="../articles/labour-laws-2026.html">
+                <span class="cat-tag">Labour Laws</span>
+                <h3>7 Labour Laws Every Employee Must Know in 2026</h3>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <h3>Think Like HR</h3>
+        <p>What HR Knows. What Employees Should Know.</p>
+        <p>© 2026 Think Like HR</p>
+    </footer>
+
+</body>
+</html>
