@@ -507,3 +507,13 @@ footer{
 .article-card a:hover{
     color:#d4af37;
 }
+.insight-card{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+}
+
+.insight-card:hover{
+    transform:translateY(-4px);
+    transition:.3s;
+}
