@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gratuity Explained: What Every Indian Employee Must Know | Think Like HR</title>
+<meta name="description" content="Gratuity is money your employer legally owes you after 5 years of service. Most employees don't know how it's calculated, when they qualify, or what HR won't tell them about claiming it.">
+<meta name="author" content="Mihir Madhuvan">
+<meta property="og:title" content="Gratuity Explained | Think Like HR">
+<meta property="og:description" content="Gratuity is money your employer legally owes you. Here's how it works, what you're owed, and what HR won't tell you about claiming it.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1108;
+    --paper: #faf7f2;
+    --paper-dark: #f0ebe0;
+    --accent: #c8102e;
+    --accent-gold: #b8860b;
+    --rule: #d4c9b0;
+    --text-body: #2c2416;
+    --text-muted: #7a6e5f;
+    --col-width: 720px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--text-body); font-family: 'Source Serif 4', Georgia, serif; font-size: 18px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+  .reading-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); width: 0%; z-index: 9999; transition: width 0.1s linear; }
+  .navbar { position: sticky; top: 0; z-index: 100; background: var(--ink); border-bottom: 3px solid var(--accent); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 58px; }
+  .logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: #fff; text-decoration: none; letter-spacing: 0.02em; }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+  .nav-links a { color: #c8bfb0; text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: #fff; }
+  .article-hero { background: #2c1a08; color: #fff; padding: 4rem 2rem 3.5rem; position: relative; overflow: hidden; }
+  .article-hero::before {
+    content: '5';
+    position: absolute; right: 2%; top: 50%; transform: translateY(-50%);
+    font-family: 'Playfair Display', serif; font-size: clamp(12rem, 30vw, 22rem);
+    font-weight: 900; color: rgba(184,134,11,0.07); line-height: 1;
+    pointer-events: none; user-select: none;
+  }
+  .hero-inner { max-width: var(--col-width); margin: 0 auto; position: relative; }
+  .article-tag { display: inline-block; background: var(--accent-gold); color: #fff; font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.8rem; margin-bottom: 1.25rem; }
+  .article-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; line-height: 1.15; color: #fff; margin-bottom: 1rem; }
+  .article-subtitle { font-size: 1.1rem; color: #c8bfb0; font-style: italic; margin-bottom: 1.5rem; line-height: 1.6; max-width: 600px; }
+  .article-meta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; color: #8a7e70; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.25rem; }
+  .article-meta .author { color: #c8bfb0; font-weight: 500; }
+  .article-meta .sep { color: #4a3e30; }
+  .article-container { max-width: var(--col-width); margin: 0 auto; padding: 3rem 2rem 4rem; }
+  .article-container h2 { font-family: 'Playfair Display', serif; font-size: 1.55rem; font-weight: 700; color: var(--ink); margin: 2.5rem 0 0.75rem; line-height: 1.3; }
+  .article-container h3 { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 600; color: var(--accent-gold); letter-spacing: 0.08em; text-transform: uppercase; margin: 1.75rem 0 0.5rem; }
+  .article-container p { margin-bottom: 1.25rem; font-size: 1.05rem; }
+  .article-container ul, .article-container ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .article-container li { margin-bottom: 0.6rem; font-size: 1.05rem; line-height: 1.7; }
+  .article-container strong { font-weight: 600; color: var(--ink); }
+  .formula-box {
+    background: #2c1a08; color: #fff; padding: 2rem; margin: 2rem 0;
+    text-align: center; border: 2px solid var(--accent-gold);
+  }
+  .formula-box .formula-label { font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 1rem; }
+  .formula-box .formula-main { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #e8d5b0; line-height: 1.6; }
+  .formula-box .formula-main strong { color: #fff; font-size: 1.2rem; }
+  .calc-example {
+    background: var(--paper-dark); border: 1px solid var(--rule); padding: 1.5rem 2rem; margin: 1.5rem 0;
+  }
+  .calc-example .calc-label { font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 0.75rem; }
+  .calc-example table { width: 100%; border-collapse: collapse; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; }
+  .calc-example td { padding: 0.4rem 0; border-bottom: 1px solid var(--rule); }
+  .calc-example td:last-child { text-align: right; font-weight: 600; }
+  .calc-example tr:last-child td { border-bottom: none; font-weight: 700; font-size: 1rem; color: var(--accent-gold); }
+  .money-box { background: var(--ink); color: #fff; padding: 1.5rem 2rem; margin: 2rem 0; border-left: 5px solid var(--accent-gold); }
+  .money-box .money-label { font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 0.75rem; }
+  .money-box p { color: #c8bfb0; font-size: 1rem; margin-bottom: 0.5rem; }
+  .money-box strong { color: #fff; }
+  .warning-box { background: #fff5f5; border: 1px solid #e8c0c0; border-left: 4px solid var(--accent); padding: 1.25rem 1.5rem; margin: 1.75rem 0; }
+  .warning-box .warning-label { font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+  .warning-box p { font-size: 0.98rem; margin-bottom: 0; }
+  .pull-quote { border-left: 4px solid var(--accent-gold); padding: 1rem 1.5rem; margin: 2rem 0; background: var(--paper-dark); }
+  .pull-quote p { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-style: italic; color: var(--ink); margin: 0; line-height: 1.5; }
+  .takeaways-box { background: var(--ink); color: #fff; padding: 1.75rem 2rem; margin: 2rem 0; border-left: 5px solid var(--accent); }
+  .takeaways-box h3 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
+  .takeaways-box ul { margin: 0 0 0 1.25rem; }
+  .takeaways-box li { color: #d4c9b0; margin-bottom: 0.5rem; font-size: 0.95rem; }
+  .hr-divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  .faq-section { background: #2c1a08; padding: 3rem 2rem; }
+  .faq-inner { max-width: var(--col-width); margin: 0 auto; }
+  .faq-section h2 { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem; color: #e8d5b0; }
+  .faq-item { border-bottom: 1px solid rgba(255,255,255,0.1); padding: 1.25rem 0; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; color: #c8bfb0; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+  .faq-q::after { content: '+'; font-size: 1.4rem; color: var(--accent-gold); flex-shrink: 0; line-height: 1.2; }
+  .faq-item.open .faq-q::after { content: '−'; }
+  .faq-a { display: none; padding-top: 0.75rem; color: #a89880; font-size: 0.98rem; line-height: 1.7; }
+  .faq-item.open .faq-a { display: block; }
+  .conclusion { background: var(--paper-dark); padding: 3rem 2rem; border-top: 3px solid var(--ink); }
+  .conclusion-inner { max-width: var(--col-width); margin: 0 auto; }
+  .conclusion h2 { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 700; color: var(--ink); margin-bottom: 1rem; }
+  .conclusion p { color: var(--text-body); font-size: 1.05rem; margin-bottom: 1rem; line-height: 1.75; }
+  .conclusion strong { color: var(--ink); }
+  footer { background: #0f0c07; color: #6b5f50; padding: 2rem; text-align: center; font-family: 'DM Sans', sans-serif; font-size: 0.82rem; }
+  footer .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #c8bfb0; margin-bottom: 0.5rem; }
+  footer a { color: #8a7e70; text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .article-container { padding: 2rem 1.25rem; }
+    .article-hero { padding: 2.5rem 1.25rem; }
+    .faq-section, .conclusion { padding: 2rem 1.25rem; }
+    .article-hero::before { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="reading-progress" id="readingProgress"></div>
+
+<nav class="navbar">
+  <a href="../index.html" class="logo">Think Like <span>HR</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="#">Salary</a></li>
+    <li><a href="#">HR Secrets</a></li>
+    <li><a href="#">Career</a></li>
+  </ul>
+</nav>
+
+<header class="article-hero">
+  <div class="hero-inner">
+    <span class="article-tag">Salary &amp; Benefits</span>
+    <h1>Gratuity Explained</h1>
+    <p class="article-subtitle">After 5 years with a company, your employer legally owes you a lump sum payout. Most employees don't know how much, how to calculate it, or what HR might not be telling them about claiming it.</p>
+    <div class="article-meta">
+      <span class="author">Mihir Madhuvan</span>
+      <span class="sep">|</span>
+      <span>Think Like HR</span>
+      <span class="sep">|</span>
+      <span>10 min read</span>
+      <span class="sep">|</span>
+      <span>Salary &amp; Benefits</span>
+    </div>
+  </div>
+</header>
+
+<main class="article-container">
+
+  <p>You've completed five years at your company. Congratulations — you've just qualified for a benefit that could be worth lakhs of rupees. It's called gratuity.</p>
+
+  <p>It's not optional. It's not a bonus your employer can choose to give or withhold. It is a statutory right under the Payment of Gratuity Act, 1972. Your employer is legally required to pay it when you leave after completing eligible service.</p>
+
+  <p>And yet most employees discover how it works only when they're about to resign — or worse, only when they don't receive what they were owed.</p>
+
+  <div class="takeaways-box">
+    <h3>Key Takeaways</h3>
+    <ul>
+      <li>Gratuity is a legal entitlement, not a discretionary bonus, for employees with 5+ years of service</li>
+      <li>The formula is straightforward: (Last Basic + DA × 15 × Years of Service) ÷ 26</li>
+      <li>The 5-year rule has nuances — 4 years and 240 days may also qualify</li>
+      <li>Tax exemption on gratuity is available up to ₹20 lakhs for most employees</li>
+      <li>Your nominee matters — if you die in service, gratuity goes to your nominee, not automatically to family</li>
+    </ul>
+  </div>
+
+  <hr class="hr-divider">
+
+  <h2>What Is Gratuity?</h2>
+
+  <p>Gratuity is a lump sum payment an employer makes to an employee as a token of appreciation for long and loyal service. But unlike a discretionary bonus, gratuity is governed by law.</p>
+
+  <p>The Payment of Gratuity Act, 1972 applies to:</p>
+
+  <ul>
+    <li>Any factory, mine, oilfield, plantation, port, or railway</li>
+    <li>Any shop or establishment with 10 or more employees</li>
+    <li>Most organised sector companies in India</li>
+  </ul>
+
+  <p>If you work at a company with 10+ employees and have completed 5 years of continuous service, you are entitled to gratuity when you leave — whether by resignation, retirement, retrenchment, or death.</p>
+
+  <h2>The Gratuity Formula: Exact Calculation</h2>
+
+  <p>The formula is set by law and does not change between companies:</p>
+
+  <div class="formula-box">
+    <div class="formula-label">The Official Gratuity Formula</div>
+    <div class="formula-main">
+      <strong>Gratuity = (Last Drawn Basic Salary + DA) × 15 × Years of Service ÷ 26</strong><br><br>
+      Where 15 = 15 days of salary per year of service<br>
+      And 26 = working days in a month (as per law)
+    </div>
+  </div>
+
+  <div class="calc-example">
+    <div class="calc-label">Example Calculation</div>
+    <table>
+      <tr><td>Last drawn Basic + DA</td><td>₹45,000/month</td></tr>
+      <tr><td>Years of service</td><td>7 years</td></tr>
+      <tr><td>Formula</td><td>45,000 × 15 × 7 ÷ 26</td></tr>
+      <tr><td><strong>Gratuity Payable</strong></td><td>₹1,82,692</td></tr>
+    </table>
+  </div>
+
+  <p>Notice that the formula uses only Basic Salary plus Dearness Allowance — not your CTC or gross salary. This is important. If your company structures your salary with a low basic and high allowances, your gratuity will be lower than you expect.</p>
+
+  <h2>The 5-Year Rule — With One Important Exception</h2>
+
+  <p>The general rule is 5 years of continuous service. But there is a nuance most employees miss:</p>
+
+  <div class="money-box">
+    <div class="money-label">The 240-Day Rule</div>
+    <p>If an employee has worked for <strong>4 years and 240 days or more</strong>, courts and many employers treat this as completion of the 5th year for the purpose of gratuity eligibility.</p>
+    <p>This interpretation is supported by various legal judgments, though it's not uniformly enforced. If you're in this situation, raise a formal query with HR in writing.</p>
+  </div>
+
+  <p>This means: if you're planning to resign after 4.5 years, check your actual working days carefully. You may be closer to the threshold than you think — and a few weeks' difference could mean eligibility for a significant sum.</p>
+
+  <h2>How Gratuity Compares Across Salary Levels</h2>
+
+  <p>Here's what the formula looks like in practice for different salary levels after exactly 5 years of service:</p>
+
+  <div class="calc-example">
+    <div class="calc-label">Gratuity After 5 Years — By Salary</div>
+    <table>
+      <tr><td>Basic + DA: ₹20,000/month</td><td>₹57,692</td></tr>
+      <tr><td>Basic + DA: ₹35,000/month</td><td>₹1,00,962</td></tr>
+      <tr><td>Basic + DA: ₹60,000/month</td><td>₹1,73,077</td></tr>
+      <tr><td>Basic + DA: ₹1,00,000/month</td><td>₹2,88,462</td></tr>
+    </table>
+  </div>
+
+  <p>Every additional year of service multiplies this proportionally. An employee with 15 years at ₹60,000 basic receives over ₹5 lakhs in gratuity alone.</p>
+
+  <h2>Tax Treatment of Gratuity</h2>
+
+  <p>Good news: gratuity has generous tax exemptions under Indian law.</p>
+
+  <p>For employees covered under the Gratuity Act (most formal sector employees):</p>
+
+  <ul>
+    <li>The least of three amounts is exempt from tax:
+      <ul>
+        <li>Actual gratuity received</li>
+        <li>₹20 lakhs (revised limit as of 2018)</li>
+        <li>The formula-calculated amount</li>
+      </ul>
+    </li>
+    <li>For most salaried employees, the gratuity received at retirement or resignation after 5+ years will be entirely tax-free</li>
+  </ul>
+
+  <p>Only if your gratuity exceeds ₹20 lakhs will the excess portion be taxable — which typically applies only to very senior employees with long tenures at high salaries.</p>
+
+  <h2>When Is Gratuity Payable?</h2>
+
+  <p>Gratuity becomes payable in the following situations:</p>
+
+  <ul>
+    <li><strong>Resignation after 5+ years</strong> — the most common scenario</li>
+    <li><strong>Retirement or superannuation</strong></li>
+    <li><strong>Death while in service</strong> — even before 5 years; paid to nominee or legal heir</li>
+    <li><strong>Disablement due to accident or disease</strong> — even before 5 years</li>
+    <li><strong>Termination/retrenchment</strong> after 5+ years</li>
+  </ul>
+
+  <p>The employer must pay gratuity within 30 days of it becoming payable. If delayed, they owe you interest on the outstanding amount.</p>
+
+  <h2>How to Claim Your Gratuity</h2>
+
+  <p>The process involves submitting Form I (Application for Gratuity) to your employer. Here's the complete flow:</p>
+
+  <ol>
+    <li>Submit Form I to your employer or HR department — ideally on or around your last working day</li>
+    <li>Your employer will acknowledge and respond with the calculated amount in Form L or dispute it in Form M</li>
+    <li>Employer has 30 days to pay once it's due</li>
+    <li>If disputed or delayed, you can approach the Controlling Authority (Labour Commissioner in your jurisdiction)</li>
+  </ol>
+
+  <div class="warning-box">
+    <div class="warning-label">⚠ Common HR Delay Tactic</div>
+    <p>Some employers delay gratuity payment citing "full and final settlement" completion or documentation gaps. This is not a valid reason for non-payment beyond 30 days. If you're facing delays, file a written complaint with the Labour Commissioner. The law is on your side.</p>
+  </div>
+
+  <h2>What About Gratuity for Private Sector Employees?</h2>
+
+  <p>The Gratuity Act covers most private sector companies with 10+ employees. However:</p>
+
+  <ul>
+    <li>Some companies have their own gratuity schemes that may be <em>more</em> generous than the Act (never less)</li>
+    <li>Employers often maintain a Gratuity Fund or take a group gratuity insurance policy — this is how they pre-fund the liability</li>
+    <li>If you see "Gratuity" as a component in your CTC sheet, it's your employer's provision for this future payout — it's part of your total cost to company, not a bonus they're giving you</li>
+  </ul>
+
+  <p>Seeing gratuity in your CTC is a common source of confusion. It doesn't mean you receive it upfront. You receive it only when you leave with 5+ years of service.</p>
+
+  <h2>Nominee for Gratuity: Don't Ignore This</h2>
+
+  <p>Just like PF, your gratuity has a nominee — the person who receives the payout if you pass away while in service.</p>
+
+  <p>This nominee is typically filled in through Form F during joining. Many employees don't remember doing this — or did it at 22 and have never updated it since.</p>
+
+  <p>If you've gotten married, had children, or had any change in family circumstances since joining your company, verify and update your gratuity nominee with HR as soon as possible.</p>
+
+  <div class="pull-quote">
+    <p>"Gratuity doesn't come automatically. It requires you to claim it. Knowing the process before you need it is the difference between getting what you're owed and losing it."</p>
+  </div>
+
+  <h2>What Gratuity Is NOT</h2>
+
+  <p>A few common misconceptions to clear up:</p>
+
+  <ul>
+    <li>Gratuity is <strong>not</strong> a voluntary payment your employer can choose to withhold if they don't like how you left</li>
+    <li>Gratuity is <strong>not</strong> affected by whether you resigned or were retrenched (after 5 years)</li>
+    <li>Gratuity is <strong>not</strong> the same as severance or notice pay — it's a separate entitlement entirely</li>
+    <li>Gratuity <strong>can</strong> be forfeited if you're terminated for misconduct that caused financial loss to the company — but this is a specific legal provision, not a blanket excuse</li>
+  </ul>
+
+</main>
+
+<section class="faq-section">
+  <div class="faq-inner">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Does maternity leave count toward the 5-year calculation?</div>
+      <div class="faq-a">Yes. Maternity leave is considered part of continuous service under both the Maternity Benefit Act and the Gratuity Act. It does not break your service continuity or reduce your years for gratuity calculation purposes.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What if I was on contract or deputation for part of my tenure?</div>
+      <div class="faq-a">The nature of employment matters. If you were on a fixed-term contract that was renewed continuously, courts have generally held that this qualifies as continuous service. If you were deputed to a subsidiary or group company, the specific arrangement and whether it was treated as service with the parent company will determine eligibility. Consult an employment lawyer if you're uncertain about your specific situation.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">My employer said they don't pay gratuity because we're a startup with fewer than 10 employees. Is that correct?</div>
+      <div class="faq-a">The Gratuity Act applies to companies that have had 10 or more employees at any point. It's not a current headcount test — once a company crosses this threshold, the Act applies going forward even if headcount later falls below 10. If your company had 10+ employees at any time during your service, you may be eligible. Verify the company's history before accepting this claim.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Can my employer deduct money from my gratuity for loans or advances?</div>
+      <div class="faq-a">Only in specific circumstances. If you have an outstanding salary advance or loan explicitly secured against your gratuity (with a written agreement), deduction may be permissible. However, general dues, notice pay shortfalls, or equipment damage claims cannot legally be deducted from gratuity without a specific legal process. If your employer is withholding gratuity citing vague deductions, challenge it.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">How long do I have to claim my gratuity after leaving?</div>
+      <div class="faq-a">There's no explicit statute of limitations in the Gratuity Act for making a claim, but delays weaken your case practically. Ideally, submit Form I at the time of leaving or within a few months. If you've left a job years ago without claiming, you can still try — but gather all documentation of your employment dates and salary carefully.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">I'm joining a new company. Does my gratuity counter restart?</div>
+      <div class="faq-a">Yes. Gratuity is employer-specific. When you join a new company, your service clock starts fresh. You need another 5 years with the new employer to be eligible for gratuity there. The gratuity from your previous employer is a separate, already-earned entitlement — claim it separately when you leave that company.</div>
+    </div>
+  </div>
+</section>
+
+<section class="conclusion">
+  <div class="conclusion-inner">
+    <h2>Five Years Is Worth More Than You Think</h2>
+    <p>Gratuity is one of the most straightforward financial entitlements in Indian employment law — and one of the least understood. It requires only that you complete 5 years of service and then leave the company for any legitimate reason.</p>
+    <p>Know the formula. Know your basic salary structure. Know your nominee status. And when the time comes, claim what is legally yours — within the timeframe, with documentation, and without hesitation.</p>
+    <p>Your employer has been calculating this liability since your first year. <strong>Make sure you're calculating it too.</strong></p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Think Like HR</div>
+  <p>What HR Knows. What Employees Should Know.</p>
+  <p style="margin-top:0.5rem;">© 2025 Think Like HR · Founded by Mihir Madhuvan · <a href="../index.html">Home</a></p>
+</footer>
+
+<script>
+  const bar = document.getElementById('readingProgress');
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const scrollTop = doc.scrollTop || document.body.scrollTop;
+    const scrollHeight = doc.scrollHeight - doc.clientHeight;
+    bar.style.width = scrollHeight > 0 ? (scrollTop / scrollHeight * 100) + '%' : '0%';
+  });
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
+  });
+</script>
+</body>
+</html>
