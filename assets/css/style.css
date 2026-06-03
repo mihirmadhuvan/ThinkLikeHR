@@ -499,3 +499,11 @@ footer{
 
     transition:width .1s linear;
 }
+.article-card a{
+    text-decoration:none;
+    color:#111827;
+}
+
+.article-card a:hover{
+    color:#d4af37;
+}
