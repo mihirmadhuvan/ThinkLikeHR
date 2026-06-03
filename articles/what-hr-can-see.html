@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What HR Can See About You | Think Like HR</title>
+<meta name="description" content="Your HR team knows more about you than you think. From your salary history to your leave patterns and performance flags — here's what's in your HR file right now.">
+<meta name="author" content="Mihir Madhuvan">
+<meta property="og:title" content="What HR Can See About You | Think Like HR">
+<meta property="og:description" content="Your HR team knows more about you than you think. Here's what's in your HR file right now.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1108;
+    --ink-light: #3d3022;
+    --paper: #faf7f2;
+    --paper-dark: #f0ebe0;
+    --accent: #c8102e;
+    --accent-gold: #b8860b;
+    --accent-warm: #e8d5b0;
+    --rule: #d4c9b0;
+    --text-body: #2c2416;
+    --text-muted: #7a6e5f;
+    --col-width: 720px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--text-body);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Reading Progress */
+  .reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--accent);
+    width: 0%;
+    z-index: 9999;
+    transition: width 0.1s linear;
+  }
+
+  /* Navbar */
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--ink);
+    border-bottom: 3px solid var(--accent);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 58px;
+  }
+
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .logo span {
+    color: var(--accent);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: #c8bfb0;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: #fff; }
+
+  /* Article Hero */
+  .article-hero {
+    background: var(--ink);
+    color: #fff;
+    padding: 4rem 2rem 3.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .article-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 40%;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(200,16,46,0.04) 10px,
+      rgba(200,16,46,0.04) 20px
+    );
+  }
+
+  .hero-inner {
+    max-width: var(--col-width);
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .article-tag {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .article-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .article-subtitle {
+    font-size: 1.1rem;
+    color: #c8bfb0;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    max-width: 600px;
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    color: #8a7e70;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1.25rem;
+  }
+
+  .article-meta .author { color: #c8bfb0; font-weight: 500; }
+  .article-meta .sep { color: #4a3e30; }
+
+  /* Article Body */
+  .article-container {
+    max-width: var(--col-width);
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
+  }
+
+  .article-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 2.5rem 0 0.75rem;
+    line-height: 1.3;
+  }
+
+  .article-container h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 2rem 0 0.5rem;
+  }
+
+  .article-container p {
+    margin-bottom: 1.25rem;
+    color: var(--text-body);
+    font-size: 1.05rem;
+  }
+
+  .article-container ul, .article-container ol {
+    margin: 1rem 0 1.5rem 1.5rem;
+  }
+
+  .article-container li {
+    margin-bottom: 0.6rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .article-container strong {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  /* Pull Quote */
+  .pull-quote {
+    border-left: 4px solid var(--accent);
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    background: var(--paper-dark);
+  }
+
+  .pull-quote p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* Key Takeaways Box */
+  .takeaways-box {
+    background: var(--ink);
+    color: #fff;
+    padding: 1.75rem 2rem;
+    margin: 2rem 0;
+    border-left: 5px solid var(--accent);
+  }
+
+  .takeaways-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .takeaways-box ul {
+    margin: 0 0 0 1.25rem;
+  }
+
+  .takeaways-box li {
+    color: #d4c9b0;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  /* Scenario Box */
+  .scenario-box {
+    border: 1px solid var(--rule);
+    border-top: 3px solid var(--accent-gold);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    background: #fdf9f3;
+  }
+
+  .scenario-box .scenario-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    margin-bottom: 0.75rem;
+  }
+
+  .scenario-box p {
+    font-size: 0.98rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* HR Rule */
+  .hr-divider {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 2.5rem 0;
+  }
+
+  .section-number {
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--paper-dark);
+    line-height: 1;
+    margin-right: 0.25rem;
+    vertical-align: middle;
+  }
+
+  /* FAQ Section */
+  .faq-section {
+    background: var(--paper-dark);
+    border-top: 2px solid var(--rule);
+    padding: 3rem 2rem;
+  }
+
+  .faq-inner {
+    max-width: var(--col-width);
+    margin: 0 auto;
+  }
+
+  .faq-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--ink);
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--rule);
+    padding: 1.25rem 0;
+  }
+
+  .faq-item:last-child { border-bottom: none; }
+
+  .faq-q {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .faq-q::after {
+    content: '+';
+    font-size: 1.4rem;
+    color: var(--accent);
+    flex-shrink: 0;
+    line-height: 1.2;
+  }
+
+  .faq-item.open .faq-q::after { content: '−'; }
+
+  .faq-a {
+    display: none;
+    padding-top: 0.75rem;
+    color: var(--text-body);
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .faq-item.open .faq-a { display: block; }
+
+  /* Conclusion */
+  .conclusion {
+    background: var(--ink);
+    color: #fff;
+    padding: 3rem 2rem;
+    border-top: 3px solid var(--accent);
+  }
+
+  .conclusion-inner {
+    max-width: var(--col-width);
+    margin: 0 auto;
+  }
+
+  .conclusion h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .conclusion p {
+    color: #c8bfb0;
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    line-height: 1.75;
+  }
+
+  .conclusion strong { color: #fff; }
+
+  /* Footer */
+  footer {
+    background: #0f0c07;
+    color: #6b5f50;
+    padding: 2rem;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+  }
+
+  footer .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #c8bfb0;
+    margin-bottom: 0.5rem;
+  }
+
+  footer a { color: #8a7e70; text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .article-container { padding: 2rem 1.25rem; }
+    .article-hero { padding: 2.5rem 1.25rem; }
+    .faq-section { padding: 2rem 1.25rem; }
+    .conclusion { padding: 2rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="reading-progress" id="readingProgress"></div>
+
+<nav class="navbar">
+  <a href="../index.html" class="logo">Think Like <span>HR</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="#">Salary</a></li>
+    <li><a href="#">HR Secrets</a></li>
+    <li><a href="#">Career</a></li>
+  </ul>
+</nav>
+
+<header class="article-hero">
+  <div class="hero-inner">
+    <span class="article-tag">HR Secrets</span>
+    <h1>What HR Can See About You</h1>
+    <p class="article-subtitle">You think you know your own work record. HR knows it better. Here's exactly what's in your file — and what it says about you.</p>
+    <div class="article-meta">
+      <span class="author">Mihir Madhuvan</span>
+      <span class="sep">|</span>
+      <span>Think Like HR</span>
+      <span class="sep">|</span>
+      <span>10 min read</span>
+      <span class="sep">|</span>
+      <span>HR Secrets</span>
+    </div>
+  </div>
+</header>
+
+<main class="article-container">
+
+  <p>Every employee has a story they think they control. The promotions they've earned, the teams they've led, the problems they've solved. You narrate your own career in your head.</p>
+
+  <p>HR has a different version of that story. And theirs is in writing.</p>
+
+  <p>Your HR file isn't just a folder with your offer letter. It's a running record of almost everything that has happened during your time at the company. Attendance. Complaints. Performance scores. Salary history. Manager feedback. And sometimes, things you don't even know were documented.</p>
+
+  <p>Nobody tells you this on day one. So let's fix that.</p>
+
+  <div class="takeaways-box">
+    <h3>Key Takeaways</h3>
+    <ul>
+      <li>HR maintains detailed records on every employee — more than most people realise</li>
+      <li>Leave patterns, performance flags, and salary data are all tracked and interpreted</li>
+      <li>Your digital footprint inside the company — emails, complaints, chat logs — may be on record</li>
+      <li>What HR sees directly affects your promotions, increments, and exit conversations</li>
+      <li>Most employees discover this only when it's too late to do anything about it</li>
+    </ul>
+  </div>
+
+  <hr class="hr-divider">
+
+  <h2>1. Your Complete Attendance and Leave Record</h2>
+
+  <p>Not just how many leaves you took. HR sees a pattern.</p>
+
+  <p>If you've taken 12 leaves this year, HR can tell:</p>
+
+  <ul>
+    <li>How many were sick leaves vs casual leaves</li>
+    <li>Whether they fell before or after weekends (a classic red flag)</li>
+    <li>Whether they spiked during appraisal season or project crunch time</li>
+    <li>Whether you've used up your earned leaves or been lapsing them</li>
+    <li>Late logins, early logouts, and half-day patterns</li>
+  </ul>
+
+  <p>One or two coincidences? Fine. A consistent pattern? That becomes a data point in your next appraisal discussion.</p>
+
+  <div class="scenario-box">
+    <div class="scenario-label">Real Workplace Scenario</div>
+    <p>Riya, a 3rd-year analyst, never realised that her 11 Monday sick leaves over 2 years had been noted. During her annual review, her manager mentioned "inconsistent availability." Riya thought it was about her project delivery. It wasn't.</p>
+  </div>
+
+  <h2>2. Your Salary History — Every Single Number</h2>
+
+  <p>HR knows exactly what you were offered on day one, every increment you've received, every counter-offer discussion you triggered, and whether you negotiated or just accepted.</p>
+
+  <p>This matters more than people think.</p>
+
+  <p>If you were underpaid for 3 years and suddenly got a 40% raise because you got an outside offer, HR has that on file. If you negotiated hard during hiring but never pushed back during appraisals, that pattern is visible too.</p>
+
+  <p>When you go for an internal transfer or a promotion, HR pulls this history. It influences what they offer you next.</p>
+
+  <div class="pull-quote">
+    <p>"The employees who know their worth tend to be paid more. Not because the system rewards them — but because they make the system show its hand."</p>
+  </div>
+
+  <h2>3. Every Complaint Filed Against You (and by You)</h2>
+
+  <p>Formal. Informal. HR has a record of both.</p>
+
+  <p>If a colleague raised a concern about your behaviour in a project — even if it was resolved casually — there's likely a note. If you escalated a problem with your manager, that's documented. If someone from another team flagged a conflict involving you, HR knows.</p>
+
+  <p>This doesn't mean you're being watched constantly. But it does mean that if something bigger happens later, HR has a trail to look back at.</p>
+
+  <p>What's equally important: if you filed complaints that were valid but never followed up, HR can see that too. It shows a pattern of either raising issues or letting them go.</p>
+
+  <h2>4. Your Performance Review History</h2>
+
+  <p>Every score. Every comment. Every year.</p>
+
+  <p>The annual performance review you filled out and forgot about? It's sitting in your file, along with your manager's ratings and feedback. HR can compare your self-assessment against your manager's rating and see if there's a gap — and what that gap looks like year over year.</p>
+
+  <ul>
+    <li>Did your ratings go from "exceeds expectations" to "meets expectations" quietly?</li>
+    <li>Did different managers give you drastically different scores?</li>
+    <li>Were there any PIPs (Performance Improvement Plans) issued?</li>
+    <li>Were there any informal "coaching conversations" documented by your manager?</li>
+  </ul>
+
+  <p>All of this feeds into how HR thinks about your trajectory at the company.</p>
+
+  <h2>5. Your Manager's Private Notes</h2>
+
+  <p>Here's the one nobody talks about.</p>
+
+  <p>Many managers — especially in large companies — maintain internal documentation about their team members. This might be through an HR tool, a shared HR system, or even just notes filed during quarterly check-ins.</p>
+
+  <p>These notes might say things like:</p>
+
+  <ul>
+    <li>"Strong technically but struggles with client communication"</li>
+    <li>"Has been disengaged since the restructuring"</li>
+    <li>"Frequently needs follow-up to meet deadlines"</li>
+    <li>"Expressed interest in moving to another team"</li>
+  </ul>
+
+  <p>You never see these notes. But they shape every conversation HR has about you when you're not in the room.</p>
+
+  <div class="scenario-box">
+    <div class="scenario-label">Real Workplace Scenario</div>
+    <p>Akash had strong technical skills and thought he was on track for a lead role. Unknown to him, his manager had been documenting "ownership gaps" for six months — specific incidents where Akash had deflected accountability. When the promotion decision came, HR already had a narrative that didn't match Akash's own view of himself.</p>
+  </div>
+
+  <h2>6. Your Digital Footprint Inside the Company</h2>
+
+  <p>Company email, company chat tools, company systems — none of it is private.</p>
+
+  <p>HR typically has access to logs of:</p>
+
+  <ul>
+    <li>Corporate email communications (at least metadata, sometimes content)</li>
+    <li>Slack or Teams messages in company workspaces</li>
+    <li>System access logs — what files you opened, what you downloaded</li>
+    <li>VPN usage and remote login activity</li>
+    <li>Project management tools — what you completed, what you dropped</li>
+  </ul>
+
+  <p>This doesn't mean HR is reading every email you send. But if there's ever an investigation — a complaint, a data breach, a behavioural issue — HR can pull those logs and they will.</p>
+
+  <p>Whatever you wouldn't say in an all-hands meeting, don't say on company tools.</p>
+
+  <h2>7. Your Resignation and Retention History</h2>
+
+  <p>If you've ever threatened to resign or actually resigned and been retained, it's on record.</p>
+
+  <p>HR tracks whether you accepted a counter-offer and whether you stayed loyal after that or left anyway. This affects how seriously they take future conversations with you about career growth — or whether they quietly start planning for your departure.</p>
+
+  <p>Companies retain some employees strategically and let others go. If HR has seen you as a retention risk twice, you may already be on a list.</p>
+
+  <h2>8. What's Not in Your File (But Should Be)</h2>
+
+  <p>Here's the frustrating flip side. A lot of what works in your favour often doesn't get documented:</p>
+
+  <ul>
+    <li>The extra project you carried when a colleague left</li>
+    <li>The client crisis you quietly resolved at 11pm</li>
+    <li>The feedback you gave a junior that genuinely helped them</li>
+    <li>The ideas you contributed that got implemented without credit</li>
+  </ul>
+
+  <p>These things live only in people's memories — which fade, or get filtered through politics. This is why <strong>self-documentation matters</strong>. Keep a running record of what you've done. Share it in your reviews. Don't assume HR knows.</p>
+
+</main>
+
+<section class="faq-section">
+  <div class="faq-inner">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Can I ask HR to show me my own file?</div>
+      <div class="faq-a">In India, employees don't have a formal statutory right to demand their HR file like employees in some countries do. However, you can request a copy of your appraisal documents, offer letters, and increment letters. Anything beyond that depends on company policy. Some progressive companies allow access; most don't make it easy.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Does HR look at my file only during appraisals?</div>
+      <div class="faq-a">No. HR reviews files during promotions, internal transfers, background checks for new projects, disciplinary proceedings, and exit interviews. If your name comes up in any conversation — positive or negative — HR will pull your file.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What happens to my HR file after I leave?</div>
+      <div class="faq-a">Most companies retain employee records for 3–7 years after exit, sometimes longer. This includes performance records, conduct notes, and exit interview data. This is why your behaviour in the last weeks of employment matters as much as your first weeks.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Can a bad performance review follow me to a new job?</div>
+      <div class="faq-a">Officially, companies can only confirm employment dates and job title during background checks. But informal references — phone calls from manager to manager — carry far more detail. If your exit wasn't clean, that conversation can affect you years later.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Are my chat messages on Slack or Teams really being monitored?</div>
+      <div class="faq-a">Not typically in real time. But companies legally own their communication platforms and IT can access logs. In any investigation, disciplinary case, or legal dispute, those messages can and will be retrieved. Operate accordingly.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">If I was put on a PIP, does it affect my future even if I improved?</div>
+      <div class="faq-a">Yes, in most systems the PIP stays on record even after successful completion. What you can control is the outcome — completing the PIP well, documenting your improvement, and having that documented. A resolved PIP is better than an unresolved one, but the record exists either way.</div>
+    </div>
+  </div>
+</section>
+
+<section class="conclusion">
+  <div class="conclusion-inner">
+    <h2>The Bottom Line</h2>
+    <p>Your HR file is not your enemy. But it is a permanent, mostly invisible record that affects decisions you'll never be invited to.</p>
+    <p>The smartest thing you can do is <strong>behave at work as though everything is documented</strong> — because much of it is. Handle conflicts in writing. Document your own wins consistently. Don't rely on anyone else to tell your story for you.</p>
+    <p>HR doesn't hate you. But they're not your friend either. They're keeping score. You should keep score too.</p>
+    <p><strong>Think Like HR. Before HR thinks about you.</strong></p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Think Like HR</div>
+  <p>What HR Knows. What Employees Should Know.</p>
+  <p style="margin-top:0.5rem;">© 2025 Think Like HR · Founded by Mihir Madhuvan · <a href="../index.html">Home</a></p>
+</footer>
+
+<script>
+  // Reading Progress
+  const bar = document.getElementById('readingProgress');
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const scrollTop = doc.scrollTop || document.body.scrollTop;
+    const scrollHeight = doc.scrollHeight - doc.clientHeight;
+    bar.style.width = scrollHeight > 0 ? (scrollTop / scrollHeight * 100) + '%' : '0%';
+  });
+
+  // FAQ Toggle
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      item.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>
