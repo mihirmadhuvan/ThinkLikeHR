@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nobody Taught You These Office Rules | Think Like HR</title>
+<meta name="description" content="The workplace has a second rulebook — unwritten, unspoken, but very much enforced. Here are the office rules no orientation session will ever cover.">
+<meta name="author" content="Mihir Madhuvan">
+<meta property="og:title" content="Nobody Taught You These Office Rules | Think Like HR">
+<meta property="og:description" content="The unwritten office rules no orientation will ever cover — and why violating them quietly kills careers.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1108;
+    --paper: #faf7f2;
+    --paper-dark: #f0ebe0;
+    --accent: #c8102e;
+    --accent-gold: #b8860b;
+    --rule: #d4c9b0;
+    --text-body: #2c2416;
+    --text-muted: #7a6e5f;
+    --col-width: 720px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper); color: var(--text-body);
+    font-family: 'Source Serif 4', Georgia, serif; font-size: 18px;
+    line-height: 1.75; -webkit-font-smoothing: antialiased;
+  }
+  .reading-progress {
+    position: fixed; top: 0; left: 0; height: 3px;
+    background: var(--accent); width: 0%; z-index: 9999; transition: width 0.1s linear;
+  }
+  .navbar {
+    position: sticky; top: 0; z-index: 100; background: var(--ink);
+    border-bottom: 3px solid var(--accent); padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between; height: 58px;
+  }
+  .logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: #fff; text-decoration: none; letter-spacing: 0.02em; }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+  .nav-links a { color: #c8bfb0; text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: #fff; }
+  .article-hero {
+    background: var(--paper-dark); border-bottom: 3px solid var(--ink);
+    padding: 4rem 2rem 3.5rem; position: relative;
+  }
+  .article-hero::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 5px;
+    background: repeating-linear-gradient(90deg, var(--ink) 0, var(--ink) 20px, var(--accent) 20px, var(--accent) 22px);
+  }
+  .hero-inner { max-width: var(--col-width); margin: 0 auto; }
+  .article-tag {
+    display: inline-block; background: var(--ink); color: #fff;
+    font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.8rem; margin-bottom: 1.25rem;
+  }
+  .article-hero h1 {
+    font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900; line-height: 1.15; color: var(--ink); margin-bottom: 1rem;
+  }
+  .article-subtitle {
+    font-size: 1.1rem; color: var(--text-muted); font-style: italic;
+    margin-bottom: 1.5rem; line-height: 1.6; max-width: 600px;
+  }
+  .article-meta {
+    display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+    font-family: 'DM Sans', sans-serif; font-size: 0.8rem; color: var(--text-muted);
+    border-top: 1px solid var(--rule); padding-top: 1.25rem;
+  }
+  .article-meta .author { color: var(--ink); font-weight: 600; }
+  .article-meta .sep { color: var(--rule); }
+  .article-container { max-width: var(--col-width); margin: 0 auto; padding: 3rem 2rem 4rem; }
+  .article-container h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--ink); margin: 2.5rem 0 0.75rem; line-height: 1.3; }
+  .article-container p { margin-bottom: 1.25rem; font-size: 1.05rem; }
+  .article-container ul, .article-container ol { margin: 1rem 0 1.5rem 1.5rem; }
+  .article-container li { margin-bottom: 0.6rem; font-size: 1.05rem; line-height: 1.7; }
+  .article-container strong { font-weight: 600; color: var(--ink); }
+  .rule-card {
+    display: grid; grid-template-columns: 3rem 1fr;
+    gap: 1rem; align-items: start;
+    border-bottom: 1px solid var(--rule); padding: 1.75rem 0;
+  }
+  .rule-card:last-of-type { border-bottom: none; }
+  .rule-num {
+    font-family: 'Playfair Display', serif; font-size: 1.75rem;
+    font-weight: 900; color: var(--accent); line-height: 1; padding-top: 0.2rem;
+  }
+  .rule-content h2 {
+    font-family: 'Playfair Display', serif; font-size: 1.3rem;
+    font-weight: 700; color: var(--ink); margin: 0 0 0.75rem; line-height: 1.3;
+  }
+  .rule-content p { font-size: 1rem; margin-bottom: 0.9rem; }
+  .rule-content ul { margin: 0.5rem 0 0.9rem 1.2rem; }
+  .rule-content li { font-size: 1rem; margin-bottom: 0.4rem; }
+  .pull-quote {
+    border-left: 4px solid var(--accent); padding: 1rem 1.5rem;
+    margin: 2rem 0; background: var(--paper-dark);
+  }
+  .pull-quote p { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-style: italic; color: var(--ink); margin: 0; line-height: 1.5; }
+  .takeaways-box { background: var(--ink); color: #fff; padding: 1.75rem 2rem; margin: 2rem 0; border-left: 5px solid var(--accent); }
+  .takeaways-box h3 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
+  .takeaways-box ul { margin: 0 0 0 1.25rem; }
+  .takeaways-box li { color: #d4c9b0; margin-bottom: 0.5rem; font-size: 0.95rem; }
+  .scenario-box { border: 1px solid var(--rule); border-top: 3px solid var(--accent-gold); padding: 1.5rem; margin: 1.5rem 0; background: #fdf9f3; }
+  .scenario-box .scenario-label { font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 0.75rem; }
+  .scenario-box p { font-size: 0.98rem; margin-bottom: 0.5rem; }
+  .hr-divider { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  .faq-section { background: var(--ink); border-top: 2px solid rgba(255,255,255,0.1); padding: 3rem 2rem; }
+  .faq-inner { max-width: var(--col-width); margin: 0 auto; }
+  .faq-section h2 { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem; color: #fff; }
+  .faq-item { border-bottom: 1px solid rgba(255,255,255,0.1); padding: 1.25rem 0; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; color: #e8d5b0; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+  .faq-q::after { content: '+'; font-size: 1.4rem; color: var(--accent); flex-shrink: 0; line-height: 1.2; }
+  .faq-item.open .faq-q::after { content: '−'; }
+  .faq-a { display: none; padding-top: 0.75rem; color: #c8bfb0; font-size: 0.98rem; line-height: 1.7; }
+  .faq-item.open .faq-a { display: block; }
+  .conclusion { background: var(--paper-dark); padding: 3rem 2rem; border-top: 3px solid var(--ink); }
+  .conclusion-inner { max-width: var(--col-width); margin: 0 auto; }
+  .conclusion h2 { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 700; color: var(--ink); margin-bottom: 1rem; }
+  .conclusion p { color: var(--text-body); font-size: 1.05rem; margin-bottom: 1rem; line-height: 1.75; }
+  .conclusion strong { color: var(--ink); }
+  footer { background: #0f0c07; color: #6b5f50; padding: 2rem; text-align: center; font-family: 'DM Sans', sans-serif; font-size: 0.82rem; }
+  footer .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #c8bfb0; margin-bottom: 0.5rem; }
+  footer a { color: #8a7e70; text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .article-container { padding: 2rem 1.25rem; }
+    .article-hero { padding: 2.5rem 1.25rem; }
+    .faq-section, .conclusion { padding: 2rem 1.25rem; }
+    .rule-card { grid-template-columns: 1fr; }
+    .rule-num { font-size: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="reading-progress" id="readingProgress"></div>
+
+<nav class="navbar">
+  <a href="../index.html" class="logo">Think Like <span>HR</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="#">Salary</a></li>
+    <li><a href="#">HR Secrets</a></li>
+    <li><a href="#">Career</a></li>
+  </ul>
+</nav>
+
+<header class="article-hero">
+  <div class="hero-inner">
+    <span class="article-tag">Workplace Etiquette</span>
+    <h1>Nobody Taught You These Office Rules</h1>
+    <p class="article-subtitle">Every office has a written rulebook. Then it has the real one — unspoken, unwritten, but absolutely enforced. Breaking these rules doesn't get you fired. It just quietly ends your growth.</p>
+    <div class="article-meta">
+      <span class="author">Mihir Madhuvan</span>
+      <span class="sep">|</span>
+      <span>Think Like HR</span>
+      <span class="sep">|</span>
+      <span>10 min read</span>
+      <span class="sep">|</span>
+      <span>Workplace Etiquette</span>
+    </div>
+  </div>
+</header>
+
+<main class="article-container">
+
+  <p>Your company gave you an employee handbook. It covered leave policies, expense claims, and code of conduct. Very thorough. Very official.</p>
+
+  <p>It didn't cover any of what follows.</p>
+
+  <p>The real rules of office life are learned through observation, through mistakes, and — if you're lucky — through someone who cares enough to tell you. Most people learn them the hard way.</p>
+
+  <p>These aren't about performance. They're about how you're perceived, how you build trust, and how you navigate the social architecture of any workplace.</p>
+
+  <div class="takeaways-box">
+    <h3>Key Takeaways</h3>
+    <ul>
+      <li>Office rules exist beyond the HR handbook — they shape your reputation daily</li>
+      <li>Violating unwritten norms causes quiet, lasting damage to how you're seen</li>
+      <li>Small behaviours — how you speak in meetings, how you handle conflict — define your brand</li>
+      <li>Most freshers and new employees violate these rules without realising it</li>
+      <li>Knowing these rules puts you years ahead of peers who learn them the hard way</li>
+    </ul>
+  </div>
+
+  <hr class="hr-divider">
+
+  <div class="rule-card">
+    <div class="rule-num">01</div>
+    <div class="rule-content">
+      <h2>Your Reputation is Built in Meetings, Not Just in Work</h2>
+      <p>The quality of your work matters. But in most organisations, the people deciding your future rarely see your actual work. They see how you show up in meetings.</p>
+      <p>Do you speak clearly and confidently? Do you listen before reacting? Do you add value or just fill space? Are you the person who asks sharp questions or the one who checks their phone?</p>
+      <p>Meetings are auditions. Treat them that way — without being theatrical about it.</p>
+    </div>
+  </div>
+
+  <div class="rule-card">
+    <div class="rule-num">02</div>
+    <div class="rule-content">
+      <h2>Never Make Your Manager Look Bad in Front of Others</h2>
+      <p>Even if your manager is wrong. Even if you know better. Public disagreement with your manager — especially in front of leadership — creates an enemy where you had none before.</p>
+      <p>Disagree in private. Come with data, not emotion. Request a one-on-one to raise your concern. This isn't weakness — it's political intelligence.</p>
+      <p>If you're genuinely right and they're genuinely wrong, the right conversation in the right setting will get you further than winning a public debate.</p>
+    </div>
+  </div>
+
+  <div class="rule-card">
+    <div class="rule-num">03</div>
+    <div class="rule-content">
+      <h2>Never Gossip. Ever.</h2>
+      <p>Offices run on information. Information is power. Gossip is information that can never be controlled once released.</p>
+      <p>Even seemingly harmless observations — "I heard Anjali is looking for a job" or "Did you see how Rohan reacted in that meeting?" — travel further and faster than you expect.</p>
+      <p>The person you're telling almost always tells someone else. That chain ends in places you didn't intend.</p>
+
+      <div class="scenario-box">
+        <div class="scenario-label">Real Workplace Scenario</div>
+        <p>Neha mentioned to a trusted colleague that she thought their manager was checking out. Two weeks later, her manager called her in for a conversation that referenced her "lack of confidence in leadership." She still doesn't know how it got back.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="rule-card">
+    <div class="rule-num">04</div>
+    <div class="rule-content">
+      <h2>The Person Who Documents Everything Wins Every Dispute</h2>
+      <p>When things go wrong — and sometimes they will — the person with a paper trail is the person who survives.</p>
+      <p>Follow up verbal conversations with a brief email summary: "As discussed, I'll handle X and you'll handle Y by Friday." This isn't paranoia. It's professional clarity.</p>
+      <p>If a task changes scope, document it. If a commitment was made by someone senior, confirm it in writing. This protects you and eliminates misunderstandings.</p>
+    </div>
+  </div>
+
+  <div class="rule-card">
+    <div class="rule-num">05</div>
+    <div class="rule-content">
+      <h2>Your First 90 Days Set Your Trajectory for Years</h2>
+      <p>People form impressions quickly and update them slowly. The behaviours you demonstrate in your first three months — your work quality, your attitude, your reliability — become the lens through which everything you do after is interpreted.</p>
+      <p>A person who starts strong and dips later is seen as "having gone through something." A person who starts weak and improves is still fighting the original impression.</p>
+      <p>Don't coast in the beginning. Don't save your best self for month four.</p>
+    </div>
+  </div>
+
+  <div class="rule-card">
+    <div class="rule-num">06</div>
+    <div class="rule-content">
+      <h2>How You Talk About Your Previous Company Says Everything About You</h2>
+      <p>New job, new team, new conversations. And someone will ask: "What was your last place like?"</p>
+      <p>Your answer is being filed away in their mind immediately. Complain about your old company and your new colleagues will wonder what you'll say about them in two years.</p>
+      <p>Be measured. Be honest without being bitter. You can acknowledge that something didn't work without making it a lengthy grievance monologue.</p>
+    </div>
+  </div>
+
+  <div class="rule-card">
+    <div class="rule-num">07</div>
+    <div class="rule-content">
+      <h2>Always Know Who the Real Decision-Makers Are</h2>
+      <p>Job titles tell you the formal hierarchy. Watching how meetings run tells you the real one.</p>
+      <p>Who speaks last? Whose questions cause people to shift tone? Whose approval is quietly sought even when it isn't formally required?</p>
+      <p>The sooner you map this informal influence structure, the sooner you can operate effectively within it — and not waste energy managing the wrong relationships.</p>
+    </div>
+  </div>
+
+  <div class="rule-card">
+    <div class="rule-num">08</div>
+    <div class="rule-content">
+      <h2>Over-Communicating is Almost Never the Problem</h2>
+      <p>Most workplace failures involve under-communication. Assumptions that weren't clarified. Updates that weren't shared. Delays that weren't flagged until they became crises.</p>
+      <p>When in doubt — send the update. Confirm the understanding. Raise the concern early. "Too much communication" is a complaint almost no manager has ever seriously made about an employee. The opposite is what ends careers.</p>
+    </div>
+  </div>
+
+  <div class="rule-card">
+    <div class="rule-num">09</div>
+    <div class="rule-content">
+      <h2>What You Say in Informal Settings Counts as Much as in Formal Ones</h2>
+      <p>The team lunch. The after-work chai. The Slack channel where everyone jokes around.</p>
+      <p>People are always forming impressions of you — including when the atmosphere feels relaxed and informal. The casual comment about a client. The off-hand remark about a colleague. The thing you said after three sips of a drink at the company party.</p>
+      <p>It all counts. Keep your self-awareness on even when the setting feels low-stakes.</p>
+    </div>
+  </div>
+
+  <div class="rule-card">
+    <div class="rule-num">10</div>
+    <div class="rule-content">
+      <h2>Learning to Receive Feedback Without Becoming Defensive Earns You Lifelong Advocates</h2>
+      <p>Someone gives you feedback. Your internal reaction is: defensive, hurt, or dismissive. Your external response should be: curious, calm, and genuinely interested in understanding.</p>
+      <p>Managers and mentors remember who received feedback well. They invest more in those people. They advocate for them because coaching them feels worthwhile.</p>
+      <p>You don't have to agree with every piece of feedback. But how you receive it shapes your entire professional reputation over a career.</p>
+
+      <div class="pull-quote">
+        <p>"The ability to hear hard things clearly, without flinching, is one of the rarest and most valuable skills in any workplace."</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<section class="faq-section">
+  <div class="faq-inner">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">What if the unwritten rules at my company are toxic? Do I still have to follow them?</div>
+      <div class="faq-a">There's a difference between unwritten rules of professionalism and toxic culture norms. You should never compromise your ethics or wellbeing to fit in. But before labelling something "toxic," it's worth asking whether you're fully understanding the context. If the culture is genuinely harmful, that's a signal about whether to stay — not a reason to lower your professional standards.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">How do I disagree with my manager without seeming like a pushover or creating conflict?</div>
+      <div class="faq-a">Ask questions before asserting positions. "I want to make sure I understand the reasoning — can you help me see why we're prioritising X over Y?" invites dialogue. State your view factually, not emotionally. End with "I'm happy to proceed either way — I just wanted to share this perspective." That's not being a pushover. That's being professional while still speaking up.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Is it really necessary to follow up every verbal conversation in writing?</div>
+      <div class="faq-a">Not every casual exchange needs an email confirmation. But anything involving commitments, deadlines, scope changes, or decisions that affect your work should be documented. A two-line email — "Just following up on our conversation — I'll do X, you'll handle Y" — takes 45 seconds and has saved many careers.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">I'm a fresher and I'm afraid of speaking up in meetings. What do I do?</div>
+      <div class="faq-a">Prepare one question or one observation before every meeting. You don't need to dominate the conversation — you need to be present in it. Even one well-timed, relevant contribution registers. Silence in every meeting for months is what creates the impression of someone with nothing to add.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What if I genuinely don't like some colleagues? Do I have to fake warmth?</div>
+      <div class="faq-a">No. Professional courtesy is not the same as forced friendship. Be reliable, respectful, and collaborative. You don't have to like everyone. You do have to work with them in a way that doesn't create drama or reputation damage for you.</div>
+    </div>
+  </div>
+</section>
+
+<section class="conclusion">
+  <div class="conclusion-inner">
+    <h2>The Rulebook They Never Hand You</h2>
+    <p>Every professional learns these rules eventually. The question is whether you learn them early and use them intentionally, or learn them late and in hindsight.</p>
+    <p>None of this is about being political for its own sake. It's about understanding that workplaces are human systems — messy, imperfect, and driven by perception as much as by output.</p>
+    <p>Work hard and deliver. But also <strong>understand the environment you're working in</strong>. The best careers are built by people who can do both.</p>
+    <p><strong>Now you have the rulebook. Use it.</strong></p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Think Like HR</div>
+  <p>What HR Knows. What Employees Should Know.</p>
+  <p style="margin-top:0.5rem;">© 2025 Think Like HR · Founded by Mihir Madhuvan · <a href="../index.html">Home</a></p>
+</footer>
+
+<script>
+  const bar = document.getElementById('readingProgress');
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const scrollTop = doc.scrollTop || document.body.scrollTop;
+    const scrollHeight = doc.scrollHeight - doc.clientHeight;
+    bar.style.width = scrollHeight > 0 ? (scrollTop / scrollHeight * 100) + '%' : '0%';
+  });
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
+  });
+</script>
+</body>
+</html>
